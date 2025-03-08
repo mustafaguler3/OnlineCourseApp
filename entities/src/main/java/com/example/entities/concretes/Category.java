@@ -31,6 +31,11 @@ public class Category extends BaseEntity<Long> {
 
     @ManyToMany(mappedBy = "categories")
     private Set<Course> courses = new HashSet<>();
+
+    public Category(String name, String coverUrl) {
+        this.name = name;
+        this.coverUrl = coverUrl;
+    }
 }
 
 
